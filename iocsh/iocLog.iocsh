@@ -1,0 +1,21 @@
+#- ###               iocLog iocsh                   ###
+#- ########################################$###########
+#- >> Mandatory
+#- IOCNAME        - IOC NAME
+#- LOG_INET       - EPICS_IOC_LOG_INET
+#- >> Optional
+#- LOG_INET_PORT  - EPICS_IOC_LOG_PORT,  Default : 7004
+#- LOGDISABLE     - log enalble,         Default : 0
+#- FACNAME        - facility name,       Default : 
+#- #########################################$##########
+
+#- The following THREE variables are global
+epicsEnvSet(EPICS_IOC_LOG_INET, "$(LOG_INET)")
+epicsEnvSet(EPICS_IOC_LOG_PORT, "$(LOG_INET_PORT=7004)")
+epicsEnvSet(iocLogDisable, "$(LOGDISABLE=0)")
+
+iocLogPrefix("fac=$(FACNAME=) proc=$(IOCNAME)");
+
+#- epics-modules/std has the doAfterIocInit function
+doAfterIocInit("iocLogInit()")
+#-
