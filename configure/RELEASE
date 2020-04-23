@@ -36,8 +36,6 @@ RECCASTER=${EPICS_MODULES}/recsync/client
 AUTOSAVE=${EPICS_MODULES}/autosave
 LUA=${EPICS_MODULES}/lua
 
-# Replace iocsh with luash (Any string...)
-LUASHELL=
 
 # Set RULES here if you want to use build rules from somewhere
 # other than EPICS_BASE:

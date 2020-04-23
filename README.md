@@ -23,23 +23,24 @@ All modules can be found in https://github.com/epics-modules
 * One can see my own setup at https://github.com/jeonghanlee/epics_manifest
 * Please check `configure/RELEASE` file
 
-## LuaShell 
-
-Instead of `iocsh`,
-
-```
-echo "LUASHELL=ENABLE" > configure/RELEASE.local
-make rebuild
-```
-
 
 ## Startup files
 
-
-* all except luaShell 
 
 ```
 ./cmd/st.cmd
 ```
 
 
+## Two Product IOCs
+
+```
+tree bin/linux-x86_64/
+bin/linux-x86_64/
+├── [jhlee     74K]  ServiceTestIOC
+└── [jhlee     75K]  ServiceTestIOCLua
+
+```
+
+* `ServiceTestIOC` : EPICS iocsh
+* `ServiceTestIOCLua` : luashell
