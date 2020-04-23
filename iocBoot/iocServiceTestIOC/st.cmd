@@ -1,6 +1,6 @@
-#!../../bin/linux-x86_64/SeviceTestIOC
+#!../../bin/linux-x86_64/ServiceTestIOC
 
-#- You may have to change SeviceTestIOC to something else
+#- You may have to change ServiceTestIOC to something else
 #- everywhere it appears in this file
 
 < envPaths
@@ -8,8 +8,8 @@
 cd "${TOP}"
 
 ## Register all support components
-dbLoadDatabase "dbd/SeviceTestIOC.dbd"
-SeviceTestIOC_registerRecordDeviceDriver pdbbase
+dbLoadDatabase "dbd/ServiceTestIOC.dbd"
+ServiceTestIOC_registerRecordDeviceDriver pdbbase
 
 ## Load record instances
 #dbLoadRecords("db/xxx.db","user=jhlee")

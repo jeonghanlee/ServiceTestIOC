@@ -6,10 +6,21 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------------------
 # Create and install (or just install) into <top>/db
 # databases, templates, substitutions like this
-#DB += xxx.db
-DB_INSTALLS += $(devIocStats)/db/iocAdminSoft.db
-DB_INSTALLS += $(RECCASTER)/db/reccaster.db
+DB += dbExample1.db
+DB += dbExample2.db
+DB += dbSubExample.db
 
+ifneq ($(devIocStats),)
+DB_INSTALLS += $(devIocStats)/db/iocAdminSoft.db
+endif
+
+ifneq ($(RECCASTER),)
+DB_INSTALLS += $(RECCASTER)/db/reccaster.db
+endif
+
+ifneq ($(AUTOSAVE),)
+DB_INSTALLS += $(AUTOSAVE)/db/save_restoreStatus.db
+endif
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
 # <anyname>_template = <templatename>
