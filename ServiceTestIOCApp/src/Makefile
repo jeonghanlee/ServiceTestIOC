@@ -51,6 +51,14 @@ ifneq ($(RECCASTER),)
    Common_libs += reccaster
 endif
 
+
+
+ifneq ($(RETOOLS),)
+   Common_dbds += retools.dbd
+   Common_libs += retools
+endif
+
+
 ifneq ($(SNCSEQ),)
     sncExample_SNCFLAGS += +r
     Common_dbds += sncExample.dbd

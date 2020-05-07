@@ -35,7 +35,7 @@ CAPUTLOG=${EPICS_MODULES}/caPutLog
 RECCASTER=${EPICS_MODULES}/recsync/client
 AUTOSAVE=${EPICS_MODULES}/autosave
 LUA=${EPICS_MODULES}/lua
-
+RETOOLS=${EPICS_MODULES}/retools
 
 # Set RULES here if you want to use build rules from somewhere
 # other than EPICS_BASE:

@@ -11,11 +11,12 @@ All modules can be found in https://github.com/epics-modules
 
 ### Optional Modules
 * sequencer
-* iocStats
-* caPutLog
-* recsync client (aka RecCaster)
-* autosave
-* lua
+* iocStats : https://github.com/epics-modules/iocStats
+* caPutLog : https://github.com/epics-modules/caPutLog
+* recsync client (aka RecCaster) : https://github.com/ChannelFinder/recsync
+* autosave : https://github.com/epics-modules/autosave
+* lua : https://github.com/epics-modules/lua
+* retools : https://github.com/brunoseivam/retools
 
 
 ## EPICS Environment

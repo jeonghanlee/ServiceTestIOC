@@ -14,7 +14,10 @@ record(ai, "$(user):aiExample")
         field(HSV, "MINOR")
         field(LSV, "MINOR")
         field(LLSV, "MAJOR")
+	info(test, "testing")
+	info(hello, "world")
 }
+
 record(calc, "$(user):calcExample")
 {
         field(DESC, "Counter")
@@ -35,6 +38,7 @@ record(calc, "$(user):calcExample")
         field(HSV, "MINOR")
         field(LSV, "MINOR")
         field(LLSV, "MAJOR")
+	info(test, "testing")
 }
 record(compress,"$(user):compressExample")
 {
