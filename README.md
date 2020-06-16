@@ -8,9 +8,12 @@ All modules can be found in https://github.com/epics-modules
 ### Minimum Required Modules
 * asyn
 * std
+* sequencer
+* calc
+* motor
 
 ### Optional Modules
-* sequencer
+
 * iocStats : https://github.com/epics-modules/iocStats
 * caPutLog : https://github.com/epics-modules/caPutLog
 * recsync client (aka RecCaster) : https://github.com/ChannelFinder/recsync

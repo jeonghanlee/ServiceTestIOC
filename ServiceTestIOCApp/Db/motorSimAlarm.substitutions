@@ -1,0 +1,34 @@
+
+global { EGU="deg", DIR="Pos", DTYP="asynMotor", SYS=$(P), MSYS=$(P)}
+
+file "basic_asyn_motor.template"
+{
+  pattern
+  {M,             ADDR,          DESC,VELO,VBAS,ACCL,BDST,BVEL,BACC,MRES,PREC,DHLM,DLLM,INIT}
+  {OP-$(D)$(ADDR),   0,"Delta$(ADDR)",   1,  .1,  .2,   0,   1,  .2,0.01,   3, 100,-100,  ""}
+  {OP-$(D)$(ADDR),   1,"Gamma$(ADDR)",   1,  .1,  .2,   0,   1,  .2,0.01,   3, 100,-100,  ""}
+  {OP-$(D)$(ADDR),   2,"Omega$(ADDR)",   1,  .1,  .2,   0,   1,  .2,0.01,   3, 100,-100,  ""}
+  {OP-$(D)$(ADDR),   3,"Phi$(ADDR)",     1,  .1,  .2,   0,   1,  .2,0.01,   3, 100,-100,  ""}
+  {OP-$(D)$(ADDR),   4,"Mu$(ADDR)",      1,  .1,  .2,   0,   1,  .2,0.01,   3, 100,-100,  ""}
+  {OP-$(D)$(ADDR),   5,"Theta$(ADDR)",   1,  .1,  .2,   0,   1,  .2,0.01,   3, 100,-100,  ""}
+}
+
+
+file "aSensor.template"
+{
+  pattern
+  {ADDR,      DEV,       MEAN,           MDEV}
+  {   0, BI-$(D)$(ADDR),  1.5, OP-$(D)$(ADDR)}
+  {   1, BI-$(D)$(ADDR),  0.5, OP-$(D)$(ADDR)}
+  {   2, BI-$(D)$(ADDR), -0.5, OP-$(D)$(ADDR)}
+  {   3, BI-$(D)$(ADDR), -1.5, OP-$(D)$(ADDR)}
+  {   4, BI-$(D)$(ADDR), -2.5, OP-$(D)$(ADDR)}
+  {   5, BI-$(D)$(ADDR), -1.0, OP-$(D)$(ADDR)}
+}
+
+file "fakemotor.template"
+ {
+  pattern
+  {Sys,             Dev,ADDR,                Mtr}
+  {$(P), OP-$(D)Fake,   0, $(P)OP-$(D)$(ADDR)}
+}

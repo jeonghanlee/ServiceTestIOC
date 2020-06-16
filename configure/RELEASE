@@ -27,15 +27,18 @@ EPICS_BASE=${EPICS_PATH}/epics-base
 # Dependent Modules
 ASYN=${EPICS_MODULES}/asyn
 STD=${EPICS_MODULES}/std
+SNCSEQ=${EPICS_MODULES}/seq
+MOTOR=${EPICS_MODULES}/motor
+CALC=${EPICS_MODULES}/calc
 
 # Optional Modules
-SNCSEQ=${EPICS_MODULES}/seq
 devIocStats=${EPICS_MODULES}/iocStats
 CAPUTLOG=${EPICS_MODULES}/caPutLog
 RECCASTER=${EPICS_MODULES}/recsync/client
 AUTOSAVE=${EPICS_MODULES}/autosave
 LUA=${EPICS_MODULES}/lua
 RETOOLS=${EPICS_MODULES}/retools
+
 
 # Set RULES here if you want to use build rules from somewhere
 # other than EPICS_BASE:

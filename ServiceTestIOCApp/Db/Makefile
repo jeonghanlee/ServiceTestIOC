@@ -9,6 +9,8 @@ include $(TOP)/configure/CONFIG
 DB += dbExample1.db
 DB += dbExample2.db
 DB += dbSubExample.db
+#
+DB += motorSimAlarm.db
 
 ifneq ($(devIocStats),)
 DB_INSTALLS += $(devIocStats)/db/iocAdminSoft.db
