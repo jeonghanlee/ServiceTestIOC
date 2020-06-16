@@ -5,6 +5,15 @@ A Simple EPICS IOC for Testing EPICS Middleware Services
 ## MODULES
 All modules can be found in https://github.com/epics-modules
 
+
+## Databases
+* `motorSimAlarm.db` and its template files : [1]
+* `iocAdminSoft.db` : [2]
+* `reccaster.db` : [3]
+* `save_restoreStatus.db` : [4]
+* `dbExampleX.db` : EPICS base
+
+
 ### Minimum Required Modules
 * asyn
 * std
@@ -48,3 +57,10 @@ bin/linux-x86_64/
 
 * `ServiceTestIOC` : EPICS iocsh
 * `ServiceTestIOCLua` : luashell
+
+
+## References 
+[1] https://github.com/shroffk/motorsim
+[2] https://github.com/epics-modules/iocStats
+[3] https://github.com/ChannelFinder/recsync
+[4] https://github.com/epics-modules/autosave
