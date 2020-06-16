@@ -27,20 +27,6 @@ Common_dbds += std.dbd
 Common_libs += asyn
 Common_libs +=  std
 
-#ifneq ($(MOTOR),)
-Common_dbds += motorSupport.dbd
-Common_dbds += devSoftMotor.dbd
-Common_dbds += motorSimSupport.dbd
-Common_libs += softMotor
-Common_libs += motorSimSupport
-Common_libs += motor
-#endif
-
-#ifneq ($(CALS),)
-Common_dbds += calcSupport.dbd
-Common_dbds += transformRecord.dbd
-Common_libs += calc
-#endif
 
 #ifneq ($(SNCSEQ),)
 sncExample_SNCFLAGS += +r
@@ -50,6 +36,23 @@ Common_srcs += sncExample.stt
 Common_libs += seq pv
 #endif
 
+
+
+
+ifneq ($(MOTOR),)
+Common_dbds += motorSupport.dbd
+Common_dbds += devSoftMotor.dbd
+Common_dbds += motorSimSupport.dbd
+Common_libs += softMotor
+Common_libs += motorSimSupport
+Common_libs += motor
+endif
+
+ifneq ($(CALC),)
+Common_dbds += calcSupport.dbd
+Common_dbds += transformRecord.dbd
+Common_libs += calc
+endif
 
 
 

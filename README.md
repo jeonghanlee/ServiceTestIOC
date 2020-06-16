@@ -18,8 +18,7 @@ All modules can be found in https://github.com/epics-modules
 * asyn
 * std
 * sequencer
-* calc
-* motor
+
 
 ### Optional Modules
 
@@ -29,6 +28,8 @@ All modules can be found in https://github.com/epics-modules
 * autosave : https://github.com/epics-modules/autosave
 * lua : https://github.com/epics-modules/lua
 * retools : https://github.com/brunoseivam/retools
+* calc
+* motor
 
 
 ## EPICS Environment

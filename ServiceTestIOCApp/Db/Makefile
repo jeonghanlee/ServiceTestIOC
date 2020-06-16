@@ -10,7 +10,11 @@ DB += dbExample1.db
 DB += dbExample2.db
 DB += dbSubExample.db
 #
+ifneq ($(MOTOR),)
+ifneq ($(CALC),)
 DB += motorSimAlarm.db
+endif
+endif
 
 ifneq ($(devIocStats),)
 DB_INSTALLS += $(devIocStats)/db/iocAdminSoft.db
