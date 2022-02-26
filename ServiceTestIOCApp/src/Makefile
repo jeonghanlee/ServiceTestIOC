@@ -42,10 +42,14 @@ Common_libs += seq pv
 ifneq ($(MOTOR),)
 Common_dbds += motorSupport.dbd
 Common_dbds += devSoftMotor.dbd
-Common_dbds += motorSimSupport.dbd
 Common_libs += softMotor
-Common_libs += motorSimSupport
 Common_libs += motor
+endif
+
+
+ifneq ($(MOTORSIM),)
+Common_dbds += motorSimSupport.dbd
+Common_libs += motorSimSupport
 endif
 
 ifneq ($(CALC),)
