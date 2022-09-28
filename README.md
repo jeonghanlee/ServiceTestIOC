@@ -37,6 +37,12 @@ All modules can be found in https://github.com/epics-modules
 * One can see my own setup at https://github.com/jeonghanlee/epics_manifest
 * Please check `configure/RELEASE` file
 
+```
+ServiceTestIOC (master)$ source  ~/epics/debian-11/7.0.7/setEpicsEnv.bash
+ServiceTestIOC (master)$ echo "EPICS_BASE=${EPICS_BASE}" > configure/RELEASE.local
+ServiceTestIOC (master)$ make
+```
+
 
 ## Startup files
 
