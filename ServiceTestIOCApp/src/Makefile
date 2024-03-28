@@ -61,7 +61,6 @@ endif
 
 
 ifneq ($(AUTOSAVE),)
-   Common_dbds += as.dbd
    Common_dbds += asSupport.dbd
    Common_libs += autosave
 endif
