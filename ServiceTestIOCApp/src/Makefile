@@ -95,6 +95,9 @@ endif
 Common_srcs += dbSubExample.c
 Common_srcs += myexampleHello.c
 
+Common_dbds += PVAServerRegister.dbd
+Common_dbds += qsrv.dbd
+Common_libs += qsrv
 
 
 #
@@ -109,6 +112,9 @@ ServiceTestIOC_SRCS_vxWorks += -nil-
 
 # Finally link to the EPICS Base libraries
 ServiceTestIOC_LIBS += $(EPICS_BASE_IOC_LIBS)
+ServiceTestIOC_LIBS += $(EPICS_BASE_PVA_CORE_LIBS)
+
+
 
 
 # Build the main IOC entry point on workstation OSs.
